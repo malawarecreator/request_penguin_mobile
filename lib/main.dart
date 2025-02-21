@@ -111,7 +111,7 @@ class _MainAppState extends State<MainApp> {
               ),
               SizedBox(height: 30,),
               ElevatedButton(onPressed: () async {
-                String output;
+                
                 String url_text = _controller2.text;
                 String json_text = _postdata_controller.text;
                 if (url_text.isEmpty || json_text.isEmpty) {
@@ -134,7 +134,7 @@ class _MainAppState extends State<MainApp> {
                   });
                 } catch (e) {
                   setState(() {
-                    _controller2_text = "Failed to fetch data ${e}";
+                    _controller2_text = "Failed to fetch data $e";
                   });
                 }
 
